@@ -7,6 +7,7 @@ spec:
     spec:
       containers:
         - name: my-app-container
-          image: my-app-image:v1.2.0
+          image: my-app-image:v1.2.0hotfix
+
           ports:
             - containerPort: 80
