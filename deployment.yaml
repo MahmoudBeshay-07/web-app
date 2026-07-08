@@ -10,4 +10,4 @@ spec:
           image: my-app-image:v1.2.0hotfix
 
           ports:
-            - containerPort: 80s
+            - containerPort: 80
