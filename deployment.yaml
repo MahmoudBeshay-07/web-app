@@ -1,13 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app-deployment
+  name: sample-app
+  labels:
+    app: sample-app
 spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sample-app
   template:
+    metadata:
+      labels:
+        app: sample-app
     spec:
       containers:
-        - name: my-app-container
-          image: my-app-image:v1.2.0hotfix
-
+        - name: sample-app
+          image: nginx:1.25
           ports:
             - containerPort: 80
+          resources: {}
+          env: []
