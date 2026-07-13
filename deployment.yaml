@@ -6,6 +6,9 @@ template:
   metadata:
     labels:
       app: sample-app
+      team: platform
+    annotations:
+      owner: Abdelhameed Nael     
   spec:
     containers:
       - name: sample-app
