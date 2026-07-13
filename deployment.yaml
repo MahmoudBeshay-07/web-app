@@ -16,8 +16,19 @@ spec:
     spec:
       containers:
         - name: sample-app
-          image: nginx:1.25
+          image: nginx:1.27
           ports:
             - containerPort: 80
-          resources: {}
-          env: []
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 250m
+              memory: 256Mi
+          env:
+            - name: APP_ENV
+              value: "production"
+            - name: LOG_LEVEL
+              value: "info"
+
