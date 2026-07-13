@@ -26,4 +26,9 @@ spec:
             limits:
               cpu: 250m
               memory: 256Mi
-          env: []
+          env:
+            - name: APP_ENV
+              value: "production"
+            - name: LOG_LEVEL
+              value: "info"
+
