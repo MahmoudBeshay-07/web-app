@@ -4,6 +4,9 @@ metadata:
   name: sample-app-svc
   labels:
     app: sample-app
+    team: platform
+  annotations:    
+    owner: Abdelhameed Nael 
 spec:
   type: ClusterIP
   selector:
